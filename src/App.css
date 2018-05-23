@@ -7,4 +7,11 @@
  box-shadow: #919191 3px;
  
 }
+.neologo {
+position: relative;
+align-self: center;
+padding-top:0px;
+margin-top: 0px;
+width: 200px;
+}
 

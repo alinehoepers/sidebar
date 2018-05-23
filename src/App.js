@@ -9,6 +9,10 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import styles from './styles'
 import './App.css';
+import SearchBar from './SearchBar'
+import logoneo from './logo-neo.png'
+
+
 
 class PersistentDrawer extends React.Component {
   state = {
@@ -47,10 +51,13 @@ class PersistentDrawer extends React.Component {
           <IconButton onClick={this.handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
-        </div>
-      
-        <Divider/>
-          <div className='menuitems'>         
+          
+        </div>  
+               
+        <img className='neologo' src = {logoneo}>
+        </img>
+        <Divider />
+        <div className='menuitems'>         
         <List> Dashboard</List>
         <Divider />
         <List> Equipe</List>
@@ -61,9 +68,10 @@ class PersistentDrawer extends React.Component {
         <Divider />
         <List> Seminários</List>
         <Divider />
+        </div>
         
-         </div> 
-      </Drawer>
+        </Drawer> 
+      
     );
     
 
