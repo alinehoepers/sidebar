@@ -2,94 +2,13 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import classNames from 'classnames';
 import { withStyles } from '@material-ui/core/styles';
-import Drawer from '@material-ui/core/Drawer';
-import AppBar from '@material-ui/core/AppBar';
-import Toolbar from '@material-ui/core/Toolbar';
-import List from '@material-ui/core/List';
-import MenuItem from '@material-ui/core/MenuItem';
-import Typography from '@material-ui/core/Typography';
-import TextField from '@material-ui/core/TextField';
-import Divider from '@material-ui/core/Divider';
-import IconButton from '@material-ui/core/IconButton';
+import {AppBar, Toolbar, Drawer, List, MenuItem, Typography, Textfield, Divider, IconButton} from '@material-ui/core';
+
 import MenuIcon from '@material-ui/icons/Menu';
 import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
+import styles from './styles'
 import './App.css';
-
-const drawerWidth = 260;
-
-
-const styles = theme => ({
-  root: {
-    flexGrow: 1,
-  },
-  appFrame: {
-    height: 500,
-    zIndex: 1,
-    overflow: 'hidden',
-    position: 'relative',
-    display: 'flex',
-    width: '100%',
-  },
-  appBar: {
-    position: 'absolute',
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  appBarShift: {
-    width: `calc(100% - ${drawerWidth}px)`,
-    transition: theme.transitions.create(['margin', 'width'], {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'appBarShift-left': {
-    marginLeft: drawerWidth,
-  },
-  menuButton: {
-    marginLeft: 12,
-    marginRight: 20,
-  },
-  hide: {
-    display: 'none',
-  },
-  drawerPaper: {
-    position: 'relative',
-    width: drawerWidth,
-  },
-  drawerHeader: {
-    display: 'flex',
-    alignItems: 'center',
-    justifyContent: 'flex-end',
-    padding: '0 8px',
-    ...theme.mixins.toolbar,
-  },
-  content: {
-    flexGrow: 1,
-    backgroundColor: theme.palette.background.default,
-    padding: theme.spacing.unit * 3,
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.sharp,
-      duration: theme.transitions.duration.leavingScreen,
-    }),
-  },
-  'content-left': {
-    marginLeft: -drawerWidth,
-  },
-  
-  contentShift: {
-    transition: theme.transitions.create('margin', {
-      easing: theme.transitions.easing.easeOut,
-      duration: theme.transitions.duration.enteringScreen,
-    }),
-  },
-  'contentShift-left': {
-    marginLeft: 0,
-  },
-  
-});
 
 class PersistentDrawer extends React.Component {
   state = {
@@ -161,7 +80,7 @@ class PersistentDrawer extends React.Component {
       <div className={classes.root}>
         
         <div className={classes.appFrame}>
-          <AppBar
+          <AppBar color="inhreit"
             className={classNames(classes.appBar, {
               [classes.appBarShift]: open,
               [classes[`appBarShift-${anchor}`]]: open,
@@ -169,14 +88,14 @@ class PersistentDrawer extends React.Component {
           >
             <Toolbar disableGutters={!open}>
               <IconButton
-                color="inherit"
+                color="inhreit"
                 aria-label="open drawer"
                 onClick={this.handleDrawerOpen}
                 className={classNames(classes.menuButton, open && classes.hide)}
               >
                 <MenuIcon />
               </IconButton>
-              <Typography variant="title" color="inherit" noWrap>
+              <Typography variant="title" color="inherit"  noWrap>
                 Aqui vai a searchbar
               </Typography>
             </Toolbar>

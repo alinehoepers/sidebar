@@ -1,8 +1,10 @@
 .menuitems{
-  font-family: 'calibri';
+  font-family: 'Open Sans', sans-serif;
   font-size: 20px;
-  color: #ccc;
+  color: #919191;
  text-align: center;
  margin-right:0;
+ box-shadow: #919191 3px;
+ 
 }
 
