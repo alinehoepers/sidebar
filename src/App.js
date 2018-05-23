@@ -48,14 +48,14 @@ class PersistentDrawer extends React.Component {
         }}
       >
         <div className={classes.drawerHeader}>
+        <img className='neologo' src = {logoneo}>
+        </img>
           <IconButton onClick={this.handleDrawerClose}>
             {theme.direction === 'rtl' ? <ChevronRightIcon /> : <ChevronLeftIcon />}
           </IconButton>
           
         </div>  
                
-        <img className='neologo' src = {logoneo}>
-        </img>
         <Divider />
         <div className='menuitems'>         
         <List> Dashboard</List>
