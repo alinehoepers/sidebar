@@ -9,8 +9,9 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import styles from './styles'
 import './App.css';
-import SearchBox from './SearchBox'
+import SearchBar from './SearchBar';
 import logoneo from './logo-neo.png'
+
 
 
 
@@ -55,6 +56,8 @@ class PersistentDrawer extends React.Component {
           </IconButton>
           
         </div>  
+
+        
                
         <Divider />
         <div className='menuitems'>         
@@ -104,7 +107,14 @@ class PersistentDrawer extends React.Component {
                 <MenuIcon />
               </IconButton>
               <Typography variant="title" color="inherit"  noWrap>
-              < SearchBox />
+              <SearchBar
+      onChange={() => console.log('onChange')}
+      onRequestSearch={() => console.log('onRequestSearch')}
+      style={{
+        marginLeft: 20,
+        width: 500
+      }}
+    />
               
               </Typography>
             </Toolbar>
