@@ -9,7 +9,7 @@ import ChevronLeftIcon from '@material-ui/icons/ChevronLeft';
 import ChevronRightIcon from '@material-ui/icons/ChevronRight';
 import styles from './styles'
 import './App.css';
-import SearchBar from './SearchBar'
+import SearchBox from './SearchBox'
 import logoneo from './logo-neo.png'
 
 
@@ -104,7 +104,8 @@ class PersistentDrawer extends React.Component {
                 <MenuIcon />
               </IconButton>
               <Typography variant="title" color="inherit"  noWrap>
-                Aqui vai a searchbar
+              < SearchBox />
+              
               </Typography>
             </Toolbar>
           </AppBar>
